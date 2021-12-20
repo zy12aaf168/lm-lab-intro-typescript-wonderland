@@ -1,19 +1,46 @@
-import { askQuestion } from './ask_question';
-import { print } from './print';
+import { endAdventure } from '.';
+import { meetTheCheshireCat } from './2_cheshire_cat';
+import { clear, print, askQuestion } from './console';
 
-// we can make a custom type from an array
-// hover 'Hole' and see that it's now defined as the union of whatever is in the 'holes' array
-const holes = ['Badger', 'Fox', 'Swiss Cheese', 'Donut'] as const;
+// NOTE: making a custom type from an array can be very useful
+const holes = ['Badger', 'Fox', 'Swiss Cheese', 'Donut'] as const; // 👉 FIXME ❌
+// hover 'Hole' in the below line and see that it's now defined as the union of whatever is in the 'holes' array
 type Hole = typeof holes[number];
 
 export function enterTheRabbitHole(name: string) {
-	print(`Welcome ${name}!`);
+	clear(false);
+	print('------------------------');
+	print(`🥳 Welcome ${name}! 🥳`);
+	print('------------------------');
 	print('You can see a number of holes: ');
 	holes.forEach((h, i) => print(`   ${i} - ${h}`));
-	askQuestion('Which number hole contains the magical adventure?', enterHole);
+	askQuestion('Which number hole will you choose?', enterHole);
 }
 
-// our askQuestion function always returns a string...
-// ... even though we know in this case the user has been prompted for a number!
-// sadly we can't enforce that right now, so we have to check
-export function enterHole(hole: string) {}
+export function enterHole(hole: string): void {
+	clear(true);
+
+	//  it might seem like we know this is a number, but of course the user can enter any nonsense to the prompt!
+	const number = parseInt(hole);
+
+	if (isNaN(number)) {
+		print(`😮`);
+		print(`That's not a number 😭`);
+		return endAdventure();
+	}
+
+	if (number < 0 || number > holes.length - 1) {
+		print(`😮`);
+		print(`${number} is an invalid number 😭`);
+		return endAdventure();
+	}
+
+	// @ts-ignore 👉 FIXME ❌
+	if (holes[number] === 'Rabbit') {
+		return meetTheCheshireCat();
+	} else {
+		print(`WHAAAAT ❓🤯😅❓`);
+		print(`You can't find adventures down a ${holes[number]} hole!`);
+		return endAdventure();
+	}
+}
