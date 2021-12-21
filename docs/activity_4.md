@@ -6,6 +6,8 @@ In Wonderland, croquet is played by using a flamingo to push a hedgehog through 
 
 Of course!
 
+![Play Croquet](../images/croquet.jpg)
+
 👉 Read `4_croquet.ts`
 
 Notice the generic `hit<T,U>` function which operates on two generic types, one for the ball and one for the mallet.

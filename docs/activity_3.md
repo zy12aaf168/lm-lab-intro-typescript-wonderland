@@ -2,6 +2,8 @@
 
 ## Nested Interfaces
 
+![Attend a Tea Party](../images/tea_party.jpg)
+
 The Mad Hatter 🎩 has invited you to his tea party, but it seems something is wrong with the table.
 
 👉 Read `3_tea_party.ts` and note the FIXME in `setTheTable()`

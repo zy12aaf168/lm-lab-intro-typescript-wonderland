@@ -4,6 +4,8 @@
 
 The Cheshire Cat is famous for disappearing but leaving only a wide grin visible in the air.
 
+![Meet the Cheshire Cat](../images/cheshire_cat.jpg)
+
 Unfortunately, it seems that he's currently displaying the wrong facial expression and he won't let you continue.
 
 👉 Check out `2_cheshire_cat.ts` and note the FIXME: you have to add some code without altering anything else.

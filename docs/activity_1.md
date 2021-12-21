@@ -4,6 +4,8 @@
 
 Following the White Rabbit down the rabbit hole sounds easy enough, right?
 
+![Enter the Rabbit Hole](../images/rabbit_hole.jpg)
+
 But no matter which hole you choose, you can't progress.
 
 👉 Read the code in `1_rabbit_hole.ts`

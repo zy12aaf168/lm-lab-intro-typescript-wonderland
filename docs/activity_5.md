@@ -4,6 +4,8 @@
 
 You've been falsely accused of stealing the Queen's tarts.
 
+![Meet the Queen](../images/queen.jpg)
+
 👉 Read `5_queen_of_hearts.ts`
 
 👉 The first FIXME is:
