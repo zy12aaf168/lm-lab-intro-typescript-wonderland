@@ -4,6 +4,8 @@
 
 In Wonderland, croquet is played by using a flamingo to push a hedgehog through an arch made of playing cards.
 
+🏑 🦩 🦔 ♥♦♠♣
+
 Of course!
 
 ![Play Croquet](../images/croquet.jpg)
