@@ -10,7 +10,11 @@ If you're not familiar with the story, things are going to seem extremely strang
 
 The goal of the lab is to make it through Wonderland by fixing the code in each chapter in a way which allows you through to the next chapter.
 
-❗ NOTE: _Each code change is very small and simple_. This isn't about writing tonnes of code. And it's not about writing difficult code. It's about understanding the code and making the changes required to get through to the next chapter. In the process, you'll build up familiarity with TypeScript. And hopefully have some fun too :)
+❗ NOTE: _Each code change is very small and simple_.
+
+This isn't about writing tonnes of code. And it's not about writing difficult code. It's about understanding the code enough to make the changes required to get through to the next chapter.
+
+In the process, you'll build up familiarity with TypeScript. And hopefully have some fun too ☺
 
 ## Creating your application
 
