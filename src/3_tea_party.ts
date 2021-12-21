@@ -1,6 +1,6 @@
-import { endAdventure } from '.';
+import { endAdventure } from '..';
 import { playCroquet } from './4_croquet';
-import { askQuestion, clear, print } from './console';
+import { askQuestion, clear, print } from '../console';
 
 const drinks = ['Coffee', 'Tea', 'Water', 'Lemonade'] as const;
 type DrinkType = typeof drinks[number];

@@ -1,6 +1,6 @@
-import { endAdventure } from '.';
+import { endAdventure } from '..';
 import { meetTheCheshireCat } from './2_cheshire_cat';
-import { clear, print, askQuestion } from './console';
+import { clear, print, askQuestion } from '../console';
 
 // NOTE: making a custom type from an array can be very useful
 const holes = ['Badger', 'Fox', 'Swiss Cheese', 'Donut'] as const; // 👉 FIXME ❌

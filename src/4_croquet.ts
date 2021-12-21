@@ -1,6 +1,6 @@
-import { endAdventure } from '.';
+import { endAdventure } from '..';
 import { meetTheQueen } from './5_queen_of_hearts';
-import { askQuestion, clear, print } from './console';
+import { askQuestion, clear, print } from '../console';
 
 // in Wonderland, croquet is played by using a flamingo to push a hedgehog through an arch made of playing cards
 // (It's best not to worry too much about the practicalities of this)

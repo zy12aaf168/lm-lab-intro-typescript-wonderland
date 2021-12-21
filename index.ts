@@ -1,5 +1,5 @@
-import { enterTheRabbitHole } from './1_rabbit_hole';
 import { clear, print, askQuestion } from './console';
+import { enterTheRabbitHole } from './src/1_rabbit_hole';
 
 export function haveAdventures(): void {
 	clear(false);
