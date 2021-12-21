@@ -64,6 +64,10 @@ This is a confusingly-designed interface structure - in the real world our inter
 
 You've had a chance to play with TypeScript features and syntax. In the process you've seen some poor choices - confusing interface structures, bad choices of generic functions. And you've seen some ways that TypeScript makes it easy to work even with these bad choices!
 
-# Extension
+# Extension - Convert an existing program
 
-Can you take some JavaScript you've written elsewhere and convert it to TypeScript? How would you make _good_ use of the TypeScript features? Even something as simple as adding parameter type checking can make JavaScript programs much easier to work with.
+Can you take some JavaScript you've written elsewhere and convert it to TypeScript?
+
+Think about how would you make _good_ use of TypeScript. Even something as simple as adding parameter type checking can make JavaScript programs much easier to work with!
+
+👉 Pick an existing program, function or class you've written and create a TypeScript version.
