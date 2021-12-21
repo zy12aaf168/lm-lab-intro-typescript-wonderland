@@ -1,0 +1,39 @@
+import { endAdventure } from '.';
+import { attendATeaParty } from './3_tea_party';
+import { askQuestion, clear, print } from './console';
+
+const expressions = [
+	'☹ Frown ☹',
+	'🙂 Smile 🙂',
+	'😁 Grin 😁',
+	'😶 Blank Face 😶',
+	'😡 Angry Face 😡',
+] as const;
+type FacialExpression = typeof expressions[number];
+
+class CheshireCat {
+	name: string = 'The Cheshire Cat';
+	expression: FacialExpression = expressions[0];
+}
+
+export function meetTheCheshireCat(): void {
+	clear(true);
+
+	const theCat = new CheshireCat();
+
+	// 👉 FIXME ❌
+	// 		Add some code here which allows you to progress *without* altering any other code in this file
+	// 👉 END FIXME ❌
+
+	print(`You can see a wide ${theCat.expression} hovering in the air.`);
+
+	if (theCat.expression === '😁 Grin 😁') {
+		print(
+			`🥳 The cat allows you to continue onwards. There is the sound of a party in the distance... 🥳 `
+		);
+		return askQuestion('Press ENTER to continue! ', attendATeaParty);
+	} else {
+		print(`😱 The cat will not allow you to pass. 😱 `);
+		return endAdventure();
+	}
+}
