@@ -2,6 +2,8 @@
 
 ## Optional Properties
 
+![Wake Up](../images/wake.jpg)
+
 👉 Read `6_wake_up.ts`
 
 It looks like our `tryToWakeUp()` function isn't returning whatever we need it to.

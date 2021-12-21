@@ -36,7 +36,9 @@ You should see a welcome message and a prompt to enter your name.
 
 ## Beginning your adventure
 
-It seems that no matter what name you enter, you won't be allowed into Wonderland.
+![Welcome to Wonderland](./images/welcome.jpg)
+
+Sadly, it seems that no matter what name you enter, you won't be allowed into Wonderland.
 
 Let's take a look at the code in `index.ts` to understand why.
 
@@ -46,7 +48,7 @@ These files are pretty simple - mostly basic JavaScript, but note the use of Typ
 
 You'll have noticed the `// 👉 FIXME ❌` comment in `index.ts`.
 
-Just like Alice had her DRINKME potions 🧉, you want to keep an eye out for these FIXME indicators - they are the places in each chapter that you'll have to change in order to solve the little puzzles.
+Just as Alice had her DRINKME potions 🧉, you have some FIXME indicators - these are the places in each chapter that you'll have to change in order to solve the little puzzles.
 
 In the case of `index.ts` our FIXME looks pretty clear. We're calling `failImmediately` as our callback function, which doesn't sound great. Perhaps `checkName` would be more appropriate?
 
