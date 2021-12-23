@@ -60,6 +60,8 @@ The first looks pretty clear. We're calling `failImmediately` as our callback fu
 
 Now entering a name makes some progress... but what's this about an entry code?!
 
+## When is ELEVEN Smaller Than THREE?!
+
 Looking at the remaining two FIXMEs, we have:
 
 ```JavaScript
