@@ -79,11 +79,11 @@ This is a classic JavaScript problem: accidentally passing in the wrong types. W
 
 The culprits here are those naughty `any` type annotations. Let's use TypeScript to be specific about what types we want:
 
-👉 Change the `any` type annotations in the above snippet to `number`.
+👉 In your code, change the `any` type annotations in the above snippet to `number`.
 
 The code will no longer compile because we're trying to set strings to our number variables. Better fix that too:
 
-👉 Remove the string quotes around `11` and `3`.
+👉 In your code, remove the string quotes around `11` and `3`.
 
 Now everything works as expected! Defining the correct types helped us catch a bug! 🥳
 
