@@ -15,9 +15,22 @@ function failImmediately(): void {
 	return endAdventure();
 }
 
-function checkName(name: string): void {
+const numberBiggerThanThree: any = '11'; // 👉 FIXME ❌
+
+// 👉 FIXME ❌
+function checkEntryCodeIsBiggerThanThree(code: any) {
+	return code > '3'; // 👉 FIXME ❌
+}
+
+function startAdventure(name: string): void {
 	if (name && name.length > 0) {
-		return enterTheRabbitHole(name);
+		if (checkEntryCodeIsBiggerThanThree(numberBiggerThanThree)) {
+			return enterTheRabbitHole(name);
+		} else {
+			print('***************************************');
+			print(`Hi ${name}. Sadly, the entry code failed! ☹`);
+			return endAdventure();
+		}
 	} else {
 		print(`I don't know who you are!`);
 		return endAdventure();

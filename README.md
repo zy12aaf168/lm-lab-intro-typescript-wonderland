@@ -46,16 +46,43 @@ Sadly, it seems that no matter what name you enter, you won't be allowed into Wo
 
 Let's take a look at the code in `index.ts` to understand why.
 
-👉 Read `index.ts` and look at the functions called in `console.ts`
+👉 Read `index.ts` and look at the functions called in `console.ts`. Ignore the FIXME comments for now!
 
 These files are pretty simple - mostly basic JavaScript, but note the use of TypeScript to provide typing on the various function parameters.
 
-You'll have noticed the `// 👉 FIXME ❌` comment in `index.ts`.
+You'll have noticed the `// 👉 FIXME ❌` comments in `index.ts`.
 
 Just as Alice had her DRINKME potions 🧉, you have some FIXME indicators - these are the places in each chapter that you'll have to change in order to solve the little puzzles.
 
-In the case of `index.ts` our FIXME looks pretty clear. We're calling `failImmediately` as our callback function, which doesn't sound great. Perhaps `checkName` would be more appropriate?
+The first looks pretty clear. We're calling `failImmediately` as our callback function, which doesn't sound great. Looking at the other functions, perhaps `startAdventure` would be more appropriate?
 
-👉 Replace the call to `failImmediately` with `checkName` in the "What's your name?" prompt in `index.ts`
+👉 Replace the call to `failImmediately` with `startAdventure` in the "What's your name?" prompt in `index.ts`
 
-Now if you enter a name you can enter Wonderland! Let's go down the rabbit hole in [activity 1](./docs/activity_1.md).
+Now entering a name makes some progress... but what's this about an entry code?!
+
+Looking at the remaining two FIXMEs, we have:
+
+```JavaScript
+
+const numberBiggerThanThree: any = '11'; // 👉 FIXME ❌
+
+function checkEntryCode(code: any) { // 👉 FIXME ❌
+	return code > '3'; // 👉 FIXME ❌
+}
+```
+
+We're passing in eleven as our entry code, and checking it's bigger than three... but it's returning false 😭
+
+This is a classic JavaScript problem: accidentally passing in the wrong types. We're comparing two strings, and - in JavaScript - this just compares the first two characters, so we're really doing the comparison `1 > 3` which is `false`.
+
+The culprits here are those naughty `any` type annotations. Let's use TypeScript to be specific about what types we want:
+
+👉 Change the `any` type annotations in the above snippet to `number`.
+
+The code will no longer compile because we're trying to set strings to our number variables. Better fix that too:
+
+👉 Remove the string quotes around `11` and `3`.
+
+Now everything works as expected! Defining the correct types helped us catch a bug! 🥳
+
+Time to enter Wonderland for real. Let's go down the rabbit hole in [activity 1](./docs/activity_1.md).
