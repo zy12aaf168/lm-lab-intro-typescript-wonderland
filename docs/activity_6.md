@@ -10,7 +10,7 @@ It looks like our `tryToWakeUp()` function isn't returning whatever we need it t
 
 The condition to meet is this:
 
-```JavaScript
+```TypeScript
 awoken.wake?.wake?.wake?.canWake === 'Yes'
 ```
 
@@ -22,7 +22,7 @@ So we just need to adjust the `tryToWakeUp()` output so it meets the criteria.
 
 ❗ NB because we've defined this in our interfaces, TypeScript will help you! Start by adding a "wake" property inside the return object:
 
-```JavaScript
+```TypeScript
 
 return {
 	wake: {
@@ -32,14 +32,16 @@ return {
 
 In VSCode, Autocomplete ought to help you out. Adding a wake property inside that should also trigger autocomplete:
 
+```TypeScript
 return {
-wake: {
-wake: {
-
-    	}
+	wake:
+	{
+		wake:
+		{
+	  	}
     };
 
-````
+```
 
 And so on... eventually you will reach the final interface which has a `string` property called `canWake`:
 
@@ -54,7 +56,7 @@ return {
 			},
 		},
 	};
-````
+```
 
 This object meets the condition and you will be able to wake up!
 

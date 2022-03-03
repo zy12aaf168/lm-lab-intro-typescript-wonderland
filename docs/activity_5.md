@@ -10,13 +10,13 @@ You've been falsely accused of stealing the Queen's tarts.
 
 👉 The first FIXME is:
 
-```JavaScript
+```TypeScript
 let witnesses = [];
 ```
 
 This probably ought to call the `getWitnesses` function below.
 
-```JavaScript
+```TypeScript
 let witnesses = getWitnesses();
 ```
 
@@ -24,7 +24,7 @@ But what should that function look like?
 
 👉 Currently the function signature is a bit useless:
 
-```JavaScript
+```TypeScript
 function getWitnesses(): any {
 	return [];
 }
@@ -42,7 +42,7 @@ function getWitnesses(): any {
 
 ...
 
-```JavaScript
+```TypeScript
 function getWitnesses(): Array<Witness> {
 	return [];
 }
