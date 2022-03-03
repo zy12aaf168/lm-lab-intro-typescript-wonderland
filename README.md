@@ -12,7 +12,7 @@ The goal of the lab is to make it through Wonderland by fixing the code in each 
 
 ❗ NOTE: _Each code change is very small and simple_.
 
-This lab isn't about writing tonnes of code. And it's not about writing difficult code. It's about understanding the code enough to make the changes required to get through to the next chapter.
+This lab isn't about writing tonnes of code. And it's not about writing difficult code. It's about _understanding_ the code enough to make the changes required to get through to the next chapter.
 
 In the process, you'll build up familiarity with TypeScript. And hopefully have some fun too ☺
 
