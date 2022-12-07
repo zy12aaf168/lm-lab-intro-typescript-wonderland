@@ -58,6 +58,8 @@ The first looks pretty clear. We're calling `failImmediately` as our callback fu
 
 👉 Replace the call to `failImmediately` with `startAdventure` in the "What's your name?" prompt in `index.ts`
 
+❗ NOTE: The [nodemon tool](https://www.npmjs.com/package/nodemon) we previously mentioned means that you don't have to stop and start the application. Nodemon will automatically restart your application when it notices files have changed.
+
 Now entering a name makes some progress... but what's this about an entry code?!
 
 ## When is ELEVEN Smaller Than THREE?!
