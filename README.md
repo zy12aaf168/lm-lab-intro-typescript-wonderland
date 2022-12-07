@@ -87,4 +87,6 @@ The code will no longer compile because we're trying to set strings to our numbe
 
 Now everything works as expected! Defining the correct types helped us catch a bug! 🥳
 
+💡 In a real project, a bug like this could easily show up when users input numeric data into a textbox. By default, the textbox would contain a `string`. If we then try to compare it to a number, TypeScript will help us where JavaScript wouldn't.
+
 Time to enter Wonderland for real. Let's go down the rabbit hole in [activity 1](./docs/activity_1.md).
