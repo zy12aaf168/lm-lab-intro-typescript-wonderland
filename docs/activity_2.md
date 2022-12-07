@@ -1,6 +1,6 @@
 # Activity 2 - The Cheshire Cat
 
-## Type Restrictions in Classes
+## Const Assertions
 
 The Cheshire Cat is famous for disappearing but leaving only a wide grin visible in the air.
 
@@ -22,6 +22,52 @@ Notice how TypeScript gives you some helpers via autocomplete, and it won't let 
 theCat.expression = '😁 Grin 😁';
 ```
 
-That was easy! Make sure you understand the `class` syntax and how we've restricted the possible expressions before moving on.
+That was easy!
+
+## What's a Const Assertion?!
+
+💡 The interesting thing here is the `as const` at the end of our expression array:
+
+```TypeScript
+const expressions = [
+	'☹ Frown ☹',
+	'🙂 Smile 🙂',
+	'😁 Grin 😁',
+	'😶 Blank Face 😶',
+	'😡 Angry Face 😡',
+] as const;
+```
+
+The first `const` in this statement is saying "I do not intend to reassign this variable" but the `as const` is saying "The CONTENTS of this array will never change".
+
+This is a purely TypeScript feature. It allows TypeScript to be SURE that this array will only ever contain one of those 5 specific strings. Without the `as const` all TypeScript knows is that this is an `Array<string>` - i.e. an array that contains strings, but those strings could be anything.
+
+💡 Restricting the contents of the array gives us more power, as we can now use this array to define a type:
+
+```TypeScript
+type FacialExpression = typeof expressions[number];
+```
+
+This creates a type `FacialExpression` which is defined to be "anything that appears in the `expressions` array". Now we have the convenience that we can mark anything in our application as a `FacialExpression` and we know for sure it will be one of those five specific strings.
+
+You can see how this could be useful in all kinds of situations. For example:
+
+```TypeScript
+const responseStatus = [
+	'Idle',
+	'Pending',
+	'Awaiting',
+	'Returned',
+	'Error',
+] as const;
+type ResponseStatus = typeof responseStatus[number];
+
+const someStatus : ResponseStatus = getStatus();
+switch(someStatus){
+	case 'Idle':
+	 // etc
+	 // TypeScript will ensure we check only on the specific statuses we have defined
+}
+```
 
 Now let's go meet the Mad Hatter in [activity 3](./activity_3.md).

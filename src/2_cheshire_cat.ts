@@ -8,7 +8,7 @@ const expressions = [
 	'😁 Grin 😁',
 	'😶 Blank Face 😶',
 	'😡 Angry Face 😡',
-] as const;
+] as const; // 💡 CURIOUS - see activity_2.md for explanations
 type FacialExpression = typeof expressions[number];
 
 class CheshireCat {
@@ -25,7 +25,9 @@ export function meetTheCheshireCat(): void {
 	// 		Add some code here which allows you to progress *without* altering any other code in this file
 	// 👉 END FIXME ❌
 
-	print(`You can see a wide ${theCat.expression} hovering in the air.`);
+	print(
+		`You can see ${theCat.name}. A wide ${theCat.expression} is hovering in the air.`
+	);
 
 	if (theCat.expression === '😁 Grin 😁') {
 		print(
