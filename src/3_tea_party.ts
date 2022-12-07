@@ -2,20 +2,26 @@ import { endAdventure } from '..';
 import { playCroquet } from './4_croquet';
 import { askQuestion, clear, print } from '../console';
 
+// using const assertions to create a type
 const drinks = ['Coffee', 'Tea', 'Water', 'Lemonade'] as const;
 type DrinkType = typeof drinks[number];
 
-interface Drink {
+type Drink = {
 	type: DrinkType;
 	poured: boolean;
-}
+};
 
-interface Seat {
+type Seat = {
 	drink: Drink;
-}
+};
 
-interface Table {
+type Table = {
 	seats: Array<Seat>;
+};
+
+function setTheTable(): Table {
+	// 👉 FIXME ❌
+	return { seats: [] };
 }
 
 export function attendATeaParty() {
@@ -58,9 +64,4 @@ export function attendATeaParty() {
 	);
 	print(`🏑 Time for a nice game of croquet! 🏑`);
 	return askQuestion('Press ENTER to continue! ', playCroquet);
-}
-
-function setTheTable(): Table {
-	// 👉 FIXME ❌
-	return { seats: [] };
 }
