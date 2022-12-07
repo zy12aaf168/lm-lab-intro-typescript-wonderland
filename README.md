@@ -4,7 +4,7 @@
 
 This lab is based on Alice's Adventures in Wonderland.
 
-If you're not familiar with the story, things are going to seem extremely strange!
+If you're not [familiar with the story](https://www.youtube.com/watch?v=FFX8I4yyyxk), things are going to seem extremely strange!
 
 ## Goal
 
