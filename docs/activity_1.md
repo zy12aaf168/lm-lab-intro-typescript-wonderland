@@ -18,7 +18,7 @@ There are TWO spots marked with a FIXME. Let's begin with the second one, which 
 
 That `@ts-ignore` sounds a little suspicious. In fact, this is a comment which switches off some TypeScript type protection! That's a huge red flag ⛳⛳⛳⛳😱 - something we should never consider doing.
 
-👉 Delete the "ts-ignore" comment.
+👉 Delete the entire "ts-ignore" comment line.
 
 Now your app fails to compile! That sounds horrible but it's actually good news - TypeScript has found a problem for us.
 
