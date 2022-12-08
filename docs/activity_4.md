@@ -12,9 +12,9 @@ Of course!
 
 👉 Read `4_croquet.ts`
 
-Notice the generic `Croquet<TBall,TMallet>` interface which operates on two generic types, one for the ball and one for the mallet. The `hit` function defined on the interface uses those types so it knows what is hitting what.
+Notice the generic `Croquet<TBall,TMallet>` interface (around line 24) which operates on two generic types, one for the ball and one for the mallet. The `hit` function defined on the interface uses those types so it knows what is hitting what.
 
-However, the Queen of Hearts hasn't set any limits on those generic types, which means we can use ANYTHING as a mallet or ball. In our particular instance of the `Croquet` interface, we are currently using `number`, which doesn't seem right...
+However, the Queen of Hearts hasn't set any limits on those generic types, which means we can use ANYTHING as a mallet or ball. In our particular instance of the `Croquet` interface (around line 33), we are currently using `number`, which doesn't seem right...
 
 💡 Before we start, also notice that within the `hit` function we are checking for `string` types. Our custom `Ball` and `Mallet` types _don't actually exist at runtime_ - only when we're writing the code.
 
