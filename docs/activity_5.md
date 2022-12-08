@@ -34,7 +34,7 @@ function getWitnesses(): any {
 
 🤔 What should this function return?
 
-👉 Change the `any` return value to something useful...
+👉 Change the `any` return value to something useful...maybe an Array of Witnesses could work?
 
 ...
 
