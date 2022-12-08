@@ -62,11 +62,16 @@ const responseStatus = [
 ] as const;
 type ResponseStatus = typeof responseStatus[number];
 
+// Notice we can define the 'type' of the someStatus 
+// variable to be that of ResponseStatus
 const someStatus : ResponseStatus = getStatus();
+
+// We could even switch through on that variable
+// and TypeScript will ensure we check only on the specific 
+// statuses we have defined
 switch(someStatus){
 	case 'Idle':
 	 // etc
-	 // TypeScript will ensure we check only on the specific statuses we have defined
 }
 ```
 
