@@ -1,5 +1,5 @@
+import { enterTheRabbitHole } from './src/chapter_1/chapter_1_rabbit_hole';
 import { clear, print, askQuestion } from './src/ui/console';
-import { enterTheRabbitHole } from './src/chapter_1_rabbit_hole';
 
 export function haveAdventures(): void {
 	clear(false);
@@ -8,18 +8,6 @@ export function haveAdventures(): void {
 	print('--------------------------');
 
 	askQuestion(`What's your name? `, failImmediately); // 👉 FIXME ❌
-}
-
-function failImmediately(): void {
-	clear(false);
-	return endAdventure();
-}
-
-const numberBiggerThanThree: any = '11'; // 👉 FIXME ❌
-
-// 👉 FIXME ❌
-function checkEntryCodeIsBiggerThanThree(code: any) {
-	return code > '3'; // 👉 FIXME ❌
 }
 
 function startAdventure(name: string): void {
@@ -35,6 +23,18 @@ function startAdventure(name: string): void {
 		print(`I don't know who you are!`);
 		return endAdventure();
 	}
+}
+
+function failImmediately() {
+	clear(false);
+	return endAdventure();
+}
+
+const numberBiggerThanThree: any = '11'; // 👉 FIXME ❌
+
+// 👉 FIXME ❌
+function checkEntryCodeIsBiggerThanThree(code: any) {
+	return code > '3'; // 👉 FIXME ❌
 }
 
 export function endAdventure(): void {
