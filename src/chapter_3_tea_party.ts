@@ -1,6 +1,6 @@
 import { endAdventure } from '..';
-import { playCroquet } from './4_croquet';
-import { askQuestion, clear, print } from '../console';
+import { playCroquet } from './chapter_4_croquet';
+import { askQuestion, clear, print } from './ui/console';
 
 // using const assertions to create a type
 const drinks = ['Coffee', 'Tea', 'Water', 'Lemonade'] as const;

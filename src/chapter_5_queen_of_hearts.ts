@@ -1,6 +1,6 @@
 import { endAdventure } from '..';
-import { wakeUp } from './6_wake_up';
-import { askQuestion, clear, print } from '../console';
+import { wakeUp } from './chapter_6_wake_up';
+import { askQuestion, clear, print } from './ui/console';
 
 const verdicts = ['Guilty', 'Not Guilty'] as const;
 type Verdict = typeof verdicts[number];

@@ -1,5 +1,5 @@
-import { clear, print, askQuestion } from './console';
-import { enterTheRabbitHole } from './src/1_rabbit_hole';
+import { clear, print, askQuestion } from './src/ui/console';
+import { enterTheRabbitHole } from './src/chapter_1_rabbit_hole';
 
 export function haveAdventures(): void {
 	clear(false);
