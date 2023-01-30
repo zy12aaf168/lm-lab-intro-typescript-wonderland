@@ -1,7 +1,5 @@
 /* 
-	We want to keep all of our console-based code isolated from the rest of the app.
-
-	This "Wonderland" app is a little unusual because it
+	Let's keep the actual console-based code isolated from the rest of the app with some handy wrappers.
 */
 
 import * as readline from 'node:readline';
