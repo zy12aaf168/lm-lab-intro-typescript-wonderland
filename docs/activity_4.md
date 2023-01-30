@@ -1,6 +1,6 @@
 # Activity 4 - The Queen's Croquet
 
-## Generics
+## Dabbling with Generics
 
 In Wonderland, croquet is played by using a flamingo to push a hedgehog through an arch made of playing cards.
 
