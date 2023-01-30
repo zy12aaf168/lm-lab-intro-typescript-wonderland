@@ -1,9 +1,9 @@
-import { endAdventure } from '..';
-import { wakeUp } from './chapter_6_wake_up';
-import { askQuestion, clear, print } from './ui/console';
+import { endAdventure } from '../..';
+import { wakeUp } from '../chapter_6/chapter_6_wake_up';
+import { askQuestion, clear, print } from '../ui/console';
 
-const verdicts = ['Guilty', 'Not Guilty'] as const;
-type Verdict = typeof verdicts[number];
+const VERDICTS = ['Guilty', 'Not Guilty'] as const;
+type Verdict = typeof VERDICTS[number];
 
 interface Witness {
 	name: string;

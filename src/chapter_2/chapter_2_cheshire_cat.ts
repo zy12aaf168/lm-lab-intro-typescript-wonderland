@@ -1,19 +1,19 @@
-import { endAdventure } from '..';
-import { askQuestion, clear, print } from './ui/console';
-import { attendATeaParty } from './chapter_3_tea_party';
+import { endAdventure } from '../..';
+import { askQuestion, clear, print } from '../ui/console';
+import { attendATeaParty } from '../chapter_3/chapter_3_tea_party';
 
-const expressions = [
+const EXPRESSIONS = [
 	'☹ Frown ☹',
 	'🙂 Smile 🙂',
 	'😁 Grin 😁',
 	'😶 Blank Face 😶',
 	'😡 Angry Face 😡',
 ] as const; // 💡 CURIOUS - see activity_2.md for explanations
-type FacialExpression = typeof expressions[number];
+type FacialExpression = typeof EXPRESSIONS[number];
 
 class CheshireCat {
 	name: string = 'The Cheshire Cat';
-	expression: FacialExpression = expressions[0];
+	expression: FacialExpression = '☹ Frown ☹';
 }
 
 export function meetTheCheshireCat(): void {

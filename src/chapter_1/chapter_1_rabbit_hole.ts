@@ -1,5 +1,5 @@
 import { endAdventure } from '../..';
-import { meetTheCheshireCat } from '../chapter_2_cheshire_cat';
+import { meetTheCheshireCat } from '../chapter_2/chapter_2_cheshire_cat';
 import { clear, print, askQuestion } from '../ui/console';
 import { parseHoleInput } from '../ui/parse_input';
 import { Hole, HOLES } from './chapter_1.types';

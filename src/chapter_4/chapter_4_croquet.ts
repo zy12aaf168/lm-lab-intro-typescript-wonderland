@@ -1,6 +1,6 @@
-import { endAdventure } from '..';
-import { meetTheQueen } from './chapter_5_queen_of_hearts';
-import { askQuestion, clear, print } from './ui/console';
+import { endAdventure } from '../..';
+import { meetTheQueen } from '../chapter_5/chapter_5_queen_of_hearts';
+import { askQuestion, clear, print } from '../ui/console';
 
 // 💡 FUN FACT: In Wonderland, croquet is played by using a flamingo 🦩
 //              to push a hedgehog 🦔 through an arch made of playing cards 🃏

@@ -1,10 +1,9 @@
-import { endAdventure } from '..';
-import { playCroquet } from './chapter_4_croquet';
-import { askQuestion, clear, print } from './ui/console';
+import { endAdventure } from '../..';
+import { playCroquet } from '../chapter_4/chapter_4_croquet';
+import { askQuestion, clear, print } from '../ui/console';
 
-// using const assertions to create a type
-const drinks = ['Coffee', 'Tea', 'Water', 'Lemonade'] as const;
-type DrinkType = typeof drinks[number];
+const DRINKS = ['Coffee', 'Tea', 'Water', 'Lemonade'] as const;
+type DrinkType = typeof DRINKS[number];
 
 type Drink = {
 	type: DrinkType;
