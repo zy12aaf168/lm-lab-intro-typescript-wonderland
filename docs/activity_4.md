@@ -12,7 +12,30 @@ Of course!
 
 👉 Read `4_croquet.ts`
 
-Notice the generic `Croquet<TBall,TMallet>` interface (around line 24) which operates on two generic types, one for the ball and one for the mallet. The `hit` function defined on the interface uses those types so it knows what is hitting what.
+Generics are a powerful TypeScript feature which we will explore more in future. For now, we just want to get a little familiarity with the syntax.
+
+All we need to know is that generics are "types that can change in different circumstances".
+
+A good example of a generic is the `Array` type. It is often written as `Array<T>` which means "an array of any type". (When defining generics, the type parameters are usually called `T`.)
+
+`Array<T>` is how we refer to the array type _in general_ because _in general_ arrays can have anything in them, so we don't know what `T` might refer to. (Think of it like `x` in a mathematical equation - it stands for "any number".)
+
+But a particular array always has a specific type. For example, we might define an `Array<number>`, meaning "this specific array must have only numbers in it".
+
+💡 For arrays, there is no difference between writing `Array<number>` and `number[]`.
+
+So the array type changes depending on what the particular array contains. In general, arrays can have anything in. But a specific array must have a particular type in it.
+
+💡
+`Array<T>` - how we talk about the general concept of an array
+`Array<string>` - the type of a particular array that has strings in it
+`Array<string | number>` - the type of a particular array that can have strings and numbers in it
+
+## Generic Croquet
+
+Notice the generic `Croquet<TBall,TMallet>` interface (around line 24) which operates on two generic types, one for the ball and one for the mallet. This has TWO type parameters - a type for a ball, and a type for a mallet.
+
+The `hit` function defined on the interface uses those types so it knows what is hitting what.
 
 However, the Queen of Hearts hasn't set any limits on those generic types, which means we can use ANYTHING as a mallet or ball. In our particular instance of the `Croquet` interface (around line 33), we are currently using `number`, which doesn't seem right...
 
