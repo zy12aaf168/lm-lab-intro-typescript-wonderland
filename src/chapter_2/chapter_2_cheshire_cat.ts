@@ -13,7 +13,7 @@ type FacialExpression = typeof EXPRESSIONS[number];
 
 class CheshireCat {
 	name: string = 'The Cheshire Cat';
-	expression: FacialExpression = '☹ Frown ☹';
+	expression: FacialExpression = EXPRESSIONS[0];
 }
 
 export function meetTheCheshireCat(): void {
@@ -21,9 +21,7 @@ export function meetTheCheshireCat(): void {
 
 	const theCat = new CheshireCat();
 
-	// 👉 FIXME ❌
-	// 		Add some code here which allows you to progress *without* altering any other code in this file
-	// 👉 END FIXME ❌
+	theCat.expression = EXPRESSIONS[2];
 
 	print(
 		`You can see ${theCat.name}. A wide ${theCat.expression} is hovering in the air.`
